@@ -1,5 +1,5 @@
 
-# Teste Técnico para Vaga de Developer Fullstack na Metrópole
+# Teste Técnico para Vaga de Full Stack Developer na Metrópole GG
 
 <div align="center">
 <img src="https://i.ibb.co/t3XYkh1/a2b52ae959b6537a37a6fe65572c7400-sm-removebg-preview-2.png" alt="Metrópole Garage Logo" />
@@ -8,9 +8,9 @@
   
 ## Sobre o Projeto
 
-Bem-vindo ao **Metrópole Garage**! Este repositório contém a aplicação desenvolvida como parte do teste técnico para a vaga de **Developer Fullstack** na Metrópole. 
+Bem-vindo ao **Metrópole Garage**! Este repositório contém a aplicação desenvolvida como parte do teste técnico para a vaga de **Full Stack Developer** na Metrópole GG. 
 
-Esse é um script para gerenciamento de veículos dos jogadores da **Metrópole RP!**
+Esse é um script para gerenciamento de veículos dos jogadores da **Metrópole GG!**
 
 ## Vídeo de Demonstração
 
@@ -86,7 +86,3 @@ Aqui estão os comandos disponíveis que a aplicação adicionará ao **FiveM**:
 O design da interface também está disponível no Figma. Veja o projeto completo pelo link abaixo:
 
 [Visualizar Interface no Figma](https://www.figma.com/design/WYZvqFjluvF7jxgf9uQbMN/Metropole-Garage-UI?m=auto&t=vOy1iqJ6eUQexHrv-6)
-
-## Contribuindo
-
-Este projeto é parte do teste técnico para a vaga de Developer Fullstack na Metrópole e, portanto, não está aberto a contribuições externas.
