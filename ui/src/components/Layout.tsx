@@ -31,9 +31,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 </div>
 
                 <div className='flex-1 overflow-auto'>
-                    <div className='flex justify-center items-center h-full'>
-                        {children}
-                    </div>
+                    {children}
                 </div>
             </div>
 

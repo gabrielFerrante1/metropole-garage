@@ -2,7 +2,7 @@ import { Frown } from "lucide-react"
 
 export const VehicleListEmpty = () => {
     return (
-        <div className="flex flex-col items-center space-y-6 pb-10">
+        <div className="flex flex-col items-center justify-center space-y-6 pb-6 h-full">
             <Frown
                 size={68}
                 className="text-primary"
