@@ -42,7 +42,7 @@ const App = () => {
             window.removeEventListener('message', handleMessage);
             window.removeEventListener('keydown', handleKeydown);
         }
-    }, [])
+    }, [dispatch])
 
     return (
         <div className={`duration-500 select-none ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
