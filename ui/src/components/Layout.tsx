@@ -7,7 +7,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
     const handleCloseUI = () => fetchNui('close-ui')
 
     return (
-        <div className="size-full duration-0 bg-slate-950 max-w-6xl max-h-[65%] rounded-lg border-4 border-primary  drop-shadow-2xl ">
+        <div className="size-full duration-0 bg-slate-950 max-w-7xl max-h-[70%] rounded-lg border-4 border-primary  drop-shadow-2xl ">
             <img
                 src={HeaderBg}
                 alt="Header Background"
