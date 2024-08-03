@@ -6,14 +6,22 @@
  * @param event - The endpoint eventname to target
  * @param data - Data you wish to send in the NUI Callback
  *
- * @return {Promise<ResponseData>} - A promise that resolves to the data returned from the endpoint, formatted as `ResponseData`.
+ * @return {Promise<ResponseData | { error: string }>} - A promise that resolves to the data returned from the endpoint, formatted as `ResponseData`, or an error object.
  */
 export const fetchNui = async <ResponseData>(
     event: string,
     data?: object
 ): Promise<ResponseData | { error: string }> => {
-    const resourceName = (window as any).GetParentResourceName
-        ? (window as any).GetParentResourceName()
+    // Define an interface for the window object extension
+    interface CustomWindow extends Window {
+        GetParentResourceName?: () => string;
+    }
+
+    // Typecast window to CustomWindow
+    const customWindow = window as CustomWindow;
+
+    const resourceName = customWindow.GetParentResourceName
+        ? customWindow.GetParentResourceName()
         : "metropole-garage";
 
     try {
@@ -28,7 +36,7 @@ export const fetchNui = async <ResponseData>(
         return await response.json();
     } catch (error) {
         return {
-            error: 'An error occurred while fetching data from the NUI endpoint.'
-        }
+            error: (error instanceof Error ? error.message : 'An unknown error occurred')
+        };
     }
 }
