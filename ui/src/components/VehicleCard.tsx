@@ -1,3 +1,4 @@
+import { fetchNui } from "@/utils/fetchNui"
 import { VehicleAttributes } from "@metropole-garage/types/Vehicle"
 
 type Props = {
@@ -5,6 +6,8 @@ type Props = {
 }
 
 export const VehicleCard = ({ data }: Props) => {
+    const handleSpawnVehicle = () => fetchNui('spawn-vehicle', data)
+
     return (
         <div className="bg-slate-900 border border-slate-800 rounded-lg drop-shadow-2xl shadow-primary py-6 px-5 h-72 w-60">
             <div className="flex flex-col justify-between h-full">
@@ -39,7 +42,7 @@ export const VehicleCard = ({ data }: Props) => {
 
                 <button
                     className="bg-primary text-slate-900 font-bold py-2 px-4 rounded w-full transition-all active:scale-95 outline-none"
-
+                    onClick={handleSpawnVehicle}
                 >
                     Spawnar
                 </button>
