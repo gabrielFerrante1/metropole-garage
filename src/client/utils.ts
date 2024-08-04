@@ -63,13 +63,15 @@ export class Utils {
      * @returns {void} - This function does not return any value.
      */
     static toggleNUI(params: { show: boolean }): void {
+        const { show } = params
+
         // Toggle NUI Visibility to on/off
         SendNUIMessage({
             type: "toggle-ui",
-            show: params.show
+            show
         });
 
         // Toggle NUI Focus to on/off
-        SetNuiFocus(params.show, params.show);
+        SetNuiFocus(show, show);
     }
 }

@@ -22,7 +22,7 @@ RegisterCommand("car", async (source: number, args: string[], rawCommand: string
         return;
     }
 
-    // Spawn the vehicle to the player'
+    // Spawn the vehicle to the player
     emitNet("garage:spawn-vehicle", source, vehicle.data)
 }, true)
 
@@ -68,6 +68,6 @@ RegisterCommand("addcar", async (source: number, args: string[], rawCommand: str
         }
     })
 
-    // Send the list of vehicles to the client
-    emitNet('garage:get-vehicles-callback', source, vehicles.data)
+    // Add vehicles directly as a state owned by the Player entity
+    Entity(GetPlayerPed(source.toString())).state['player-vehicles'] = vehicles.data
 }, false)

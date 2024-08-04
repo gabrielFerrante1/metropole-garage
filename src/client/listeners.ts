@@ -10,11 +10,12 @@ onNet("garage:spawn-vehicle", (data: VehicleAttributes) => Utils.spawnVehicle(da
 
 
 /**
- *  Receives the player's list of vehicles and sends a NUI message to the client with the data received
+ * Checks for any changes in the state of the player's vehicles and sends an updated list of vehicles,
+ * which is received as a value from the handle function, to the NUI.
  */
-onNet("garage:get-vehicles-callback", (data: VehicleAttributes[]) => {
+AddStateBagChangeHandler("player-vehicles", '', (bagName: string, key: string, value: VehicleAttributes[]) => {
     SendNUIMessage({
         type: "get-vehicles",
-        vehicles: data
+        vehicles: value
     })
-})
+});
