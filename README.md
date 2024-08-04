@@ -18,16 +18,6 @@ Confira o vídeo de demonstração da aplicação clicando na imagem abaixo:
 
 [![Vídeo de Demonstração](https://i.ibb.co/K6LN4VC/Captura-de-tela-2024-08-03-162821.png)](https://streamable.com/1e42eh)
 
-## Configuração do Banco de Dados
-
-Antes de executar o projeto, você precisa configurar as credenciais do banco de dados. Siga os passos abaixo:
-
-1. **Configure as Credenciais do Banco de Dados**
-
-    Abra o arquivo de configuração do banco de dados localizado em: [db.config.ts](https://github.com/gabrielFerrante1/metropole-garage/blob/master/src/config/db.config.ts). 
-
-    No arquivo, você encontrará um objeto onde deve inserir as credenciais do seu banco de dados. Atualize as variáveis conforme suas configurações!
-
 ## Como Executar o Projeto
 
 1. **Clone o repositório ou Baixe o arquivo zip:**
@@ -35,8 +25,13 @@ Antes de executar o projeto, você precisa configurar as credenciais do banco de
     ```bash
     git clone https://github.com/gabrielFerrante1/metropole-garage
     ```
+2. **Configure as Credenciais do Banco de Dados:**
 
-2. **Instalando as dependências e Criando build do projeto (Backend e Frontend):** 
+    Abra o arquivo de configuração do banco de dados localizado em: [db.config.ts](https://github.com/gabrielFerrante1/metropole-garage/blob/master/src/config/db.config.ts). 
+
+    No arquivo, você encontrará um objeto onde deve inserir as credenciais do seu banco de dados. Atualize as variáveis conforme suas configurações!
+
+3. **Instalando as dependências e Criando build do projeto (Backend e Frontend):** 
     #### ⚠️ Os comandos abaixo devem ser executados na pasta [`root`](https://github.com/gabrielFerrante1/metropole-garage) para preparar o Backend e na pasta [`ui`](https://github.com/gabrielFerrante1/metropole-garage/tree/master/ui) para preparar o Frontend. ⚠️
   
      Com Yarn:
