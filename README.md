@@ -68,6 +68,8 @@ Antes de executar o projeto, você precisa configurar as credenciais do banco de
     Após isso, inicie o resource **`metropole-garage`** em seu servidor **FiveM**.
    
     Ao executar o servidor as tabelas necessárias serão automaticamente criadas no banco de dados e você já pode executar os comandos disponíveis.
+
+    Essa aplicação utiliza [`StateBags`](https://docs.fivem.net/docs/scripting-manual/networking/state-bags/), portanto o [`OneSync`](https://docs.fivem.net/docs/scripting-reference/onesync/) deve estar habilitado no seu servidor **FiveM**
    
     A aplicação **não** utiliza nenhum framework **FiveM**.
 
@@ -77,9 +79,9 @@ Aqui estão os comandos disponíveis que a aplicação adicionará ao **FiveM**:
 
 | Comando                      | Descrição                                                                                                                                                       | Permissão       |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-| `/garagem`                   | Abre ou fecha a interface gráfica desenvolvida em React + Vite + TypeScript. Esta interface exibe todos os carros do jogador e permite spawnar veículos. Também é possível fechar a interface pressionando a tecla Esc. | Todos os Jogadores|
+| `/garagem`                   | Abre ou fecha a interface gráfica desenvolvida em React + TypeScript. Esta interface exibe todos os carros do jogador e permite spawnar veículos. Também é possível fechar a interface pressionando a tecla `Esc`. | Todos os Jogadores|
 | `/car [placa]`               | Spawna um veículo no jogo usando a placa fornecida. Caso a placa não exista, a aplicação emitirá um evento `chat:addMessage` informando que a placa não está associada a nenhum veículo. Requer permissões ACE para execução. | Somente para ADMs|
-| `/addcar [placa] [modelo]`   | Adiciona um carro à sua garagem. O comando gera automaticamente as cores primária e secundária do carro. Caso a placa já exista e esteja registrada a outro veículo, um erro será exibido no chat através do evento `chat:addMessage`. Este comando facilita a inserção de novos veículos na garagem, eliminando a necessidade de inserção manual no banco de dados e associação a um jogador. | Todos os Jogadores|
+| `/addcar [placa] [modelo]`   | Adiciona um carro à sua garagem. O comando gera automaticamente as cores primária e secundária do carro. A placa deve ter no máximo 8 caracteres. Caso a placa já exista ou o limite de caracteres seja atingido, um erro será exibido no chat através do evento `chat:addMessage`. Este comando facilita a inserção de novos veículos na garagem, eliminando a necessidade de inserção manual no banco de dados e associação a um jogador. | Todos os Jogadores|
 
 ## Design da Interface
 
